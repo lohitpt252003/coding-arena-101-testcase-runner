@@ -1,0 +1,151 @@
+/* Light Theme CSS for Coding Arena Testcase Runner */
+:root {
+  --background-color: #f8f9fa;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --text-color: #212529;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --highlight-color: #ffc107;
+  --input-background: #ffffff;
+  --input-border: #ced4da;
+  --code-background: #f1f3f5;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Fira Code', 'Source Code Pro', Monaco, 'Courier New', monospace;
+  transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--highlight-color);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+textarea, select, input {
+  background-color: var(--input-background);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--text-color);
+  width: 100%;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+textarea:focus, select:focus, input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.CodeEditor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--input-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.CodeEditor-testcase {
+  background-color: var(--code-background);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.CodeEditor-testcase h2 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.success {
+  border: 2px solid var(--success-color);
+}
+
+.failure {
+  border: 2px solid var(--error-color);
+}
+
+.CodeEditor-addTestCase, 
+.CodeEditor-deleteAllTestcases, 
+.CodeEditor-runAllTestcases {
+  margin-right: 10px;
+}
+
+.CodeEditor-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.CodeEditor-message h1 {
+  margin: 5px 0;
+}
+
+#CodeEditor-total-testcase {
+  color: var(--text-color);
+}
+
+#CodeEditor-pass-testcases {
+  color: var(--success-color);
+}
+
+#CodeEditor-fail-testcases {
+  color: var(--error-color);
+}
+
+select {
+  max-width: 200px;
+}
+
+.toast {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.toast-success {
+  background-color: var(--success-color);
+  color: #ffffff;
+}
+
+.toast-error {
+  background-color: var(--error-color);
+  color: #ffffff;
+}
+
+/* Monaco Editor Customizations */
+.monaco-editor {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.monaco-editor-background {
+  background-color: var(--code-background) !important;
+}
